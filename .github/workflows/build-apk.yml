@@ -24,11 +24,6 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install SDK packages
-        run: |
-          yes | sdkmanager --licenses > /dev/null || true
-          sdkmanager "platforms;android-34" "build-tools;34.0.0" "platform-tools"
-
       # No gradlew needed: this installs Gradle 8.9 (compatible with AGP 8.5.2)
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
