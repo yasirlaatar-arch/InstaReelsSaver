@@ -21,9 +21,6 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
       # No gradlew needed: this installs Gradle 8.9 (compatible with AGP 8.5.2)
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
